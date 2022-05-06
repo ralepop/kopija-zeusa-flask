@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <span><a href="/"><img src='https://www.zeus.rs/wp-content/uploads/2020/11/1m-1.png' alt="ZEUS LOGO">
+        </a></span>
+
+        {% for stranica in stranice %}
+
+        <a href="{{ stranica.href }}">{{ stranica.naziv }}</a>&nbsp;&nbsp;&nbsp;
+
+        {% endfor %}
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
